@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/color_manger.dart';
+import '../../../core/routes_manager.dart';
 import '../../../core/string_manager.dart';
 import '../components/button_component.dart';
 import '../components/text_form_component.dart';
@@ -38,32 +39,35 @@ class _RegisterViewState extends State<RegisterView> {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 28.0),
                   child: SizedBox(
-                    height: 30,
+                    height: 70,
                     width: MediaQuery.of(context).size.width,
                     child: Column(
-                      children: [ Row(
-                        children: [
-                          const Spacer(flex: 3),
-                          Text(
-                            AppString.register,
-                            style: TextStyle(color: ColorManager.primary_900),
-                          ),
-                          const Spacer(flex: 2),
-                          Text(
-                            AppString.completeData,
-                            style: TextStyle(color: ColorManager.grey_200),
-                          ),
-                          const Spacer(flex: 3)
-                        ],
-                      ),
+                      children: [
+                        Row(
+                          children: [
+                            const Spacer(flex: 3),
+                            Text(
+                              AppString.register,
+                              style: TextStyle(color: ColorManager.primary_900),
+                            ),
+                            const Spacer(flex: 2),
+                            Text(
+                              AppString.completeData,
+                              style: TextStyle(color: ColorManager.grey_200),
+                            ),
+                            const Spacer(flex: 3)
+                          ],
+                        ),
                         Row(
                           children: [
                             Expanded(
                               child: Divider(
-                                  color: ColorManager.primary_900, thickness: 2),
+                                  color: ColorManager.primary_900,
+                                  thickness: 2),
                             ),
                             Container(
                               width: 30,
+                              height: 30,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(999),
                                 border: Border.all(
@@ -79,6 +83,7 @@ class _RegisterViewState extends State<RegisterView> {
                             ),
                             Container(
                               width: 30,
+                              height: 30,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(999),
                                   border: Border.all(
@@ -185,14 +190,20 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                     ],
                   ),
-                ),SizedBox(height: 30,),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ButtonComponent(
                       width: MediaQuery.of(context).size.width * .3,
                       title: AppString.next,
-                      function: () {},
+                      function: () {
+                        Navigator.of(context)
+                            .restorablePushNamed(Routes.registerPartTwoRoute);
+                      },
                     ),
                   ],
                 ),

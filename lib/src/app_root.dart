@@ -9,7 +9,7 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.registerPartTwoRoute,
+      initialRoute: Routes.loginRoute,
       onGenerateRoute: RouteGenerator.getRoutes,
       theme: getApplicationTheme() ,
     );

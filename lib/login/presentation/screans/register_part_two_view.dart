@@ -67,8 +67,8 @@ class _RegisterPartTwoState extends State<RegisterPartTwo> {
                             ),
                             Container(
                               margin: const EdgeInsets.symmetric(vertical: 6),
-                              width: 40,
-                              height: 40,
+                              width: 30,
+                              height: 30,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(999),
                                 border: Border.all(
@@ -89,8 +89,8 @@ class _RegisterPartTwoState extends State<RegisterPartTwo> {
                               ),
                             ),
                             Container(
-                              width: 40,
-                              height: 40,
+                              width: 30,
+                              height: 30,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(999),
                                 border: Border.all(
